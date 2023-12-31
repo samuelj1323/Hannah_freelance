@@ -11,6 +11,9 @@ const customPalette = {
   darkCreamBackground: "rgb(255, 242, 222)",
   softOrangeBackground: "rgb(255, 244, 224)",
   dustyPinkBackground: "rgb(250, 237, 217)",
+  darkHeaderBackround: "#21201e",
+  white: "rgb(255,255,255)",
+  menuColor: "rgb(203, 158,118)",
 };
 const theme = createTheme({
   palette: {
@@ -19,13 +22,20 @@ const theme = createTheme({
       main: customPalette.paleBackground,
     },
     secondary: {
-      main: customPalette.softRedBackground,
+      main: customPalette.darkBrownBackground,
+    },
+    topnav: {
+      main: customPalette.darkHeaderBackround,
     },
     background: {
       default: customPalette.creamBackground,
       paper: customPalette.darkCreamBackground,
     },
     // Add other color usages as needed
+  },
+  typography: {
+    lightPrimaryText: customPalette.paleBackground,
+    lightSecondaryText: customPalette.menuColor,
   },
   // ...other theme customizations
 });
