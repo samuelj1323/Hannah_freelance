@@ -3,6 +3,7 @@ import React from "react";
 import { ThemeProvider, CssBaseline, Stack } from "@mui/material";
 import theme from "./theme/theme"; // Import the custom theme
 import Header from "./components/Header/Header";
+import Landing from "./pages/Landing";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         }}
       >
         <Header />
+        <Landing />
         {/* Your other components and content */}
       </Stack>
     </ThemeProvider>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   AppBar,
   Toolbar,
@@ -12,9 +12,6 @@ import BookOutlinedIcon from "@mui/icons-material/BookOutlined";
 
 const Header = () => {
   const theme = useTheme();
-  useEffect(() => {
-    console.log(theme.palette.topnav.main);
-  }, []);
   return (
     <AppBar
       position="static"
