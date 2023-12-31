@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from "react";
+import { ThemeProvider, CssBaseline } from "@mui/material";
+import theme from "./theme/theme"; // Import the custom theme
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline /> {/* Ensures consistent baseline styles */}
+      <div
+        style={{
+          backgroundColor: theme.palette.background.default,
+          minHeight: "100vh",
+        }}
+      >
+        <h1>Welcome to My Themed App</h1>
+        {/* Your other components and content */}
+      </div>
+    </ThemeProvider>
   );
 }
 
