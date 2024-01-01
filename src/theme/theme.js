@@ -14,6 +14,7 @@ const customPalette = {
   darkHeaderBackround: "#21201e",
   white: "rgb(255,255,255)",
   menuColor: "rgb(203, 158,118)",
+  dividerRed: "rgb(228,182,166)",
 };
 const theme = createTheme({
   palette: {
@@ -27,10 +28,14 @@ const theme = createTheme({
     topnav: {
       main: customPalette.darkHeaderBackround,
     },
+    divider: {
+      main: customPalette.dividerRed,
+    },
     background: {
       default: customPalette.creamBackground,
       paper: customPalette.darkCreamBackground,
     },
+
     // Add other color usages as needed
   },
   typography: {

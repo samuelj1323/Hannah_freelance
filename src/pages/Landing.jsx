@@ -1,7 +1,8 @@
 import React from "react";
-import { Box, Typography, Stack } from "@mui/material";
-
+import { Box, Typography, Stack, Divider, useTheme } from "@mui/material";
+import Card from "../components/Card/Card";
 const Landing = () => {
+  const theme = useTheme();
   return (
     <Box>
       <Stack>
@@ -11,6 +12,13 @@ const Landing = () => {
         >
           A Freelance Writer
         </Typography>
+        <Divider
+          style={{
+            color: theme.palette.divider.main,
+          }}
+          variant="middle"
+        />
+        <Card />
       </Stack>
     </Box>
   );
