@@ -10,14 +10,6 @@ import {
 } from "@mui/material";
 import BookOutlinedIcon from "@mui/icons-material/BookOutlined";
 import { useNavigate } from "react-router-dom";
-/**
- *
- * /@TODO:
- *  I need to make the header route based on what is clicked,
- * Hannah's name: Landing
- * About: about
- * ...
- * */
 
 const Header = () => {
   const navigate = useNavigate();
@@ -34,6 +26,7 @@ const Header = () => {
           />
         </IconButton>
         <Typography
+          onClick={() => navigate("/")}
           sx={{ flexGrow: 1, fontFamily: "times-new-roman" }}
           variant="h4"
           color={theme.typography.lightPrimaryText}
