@@ -9,8 +9,18 @@ import {
   useTheme,
 } from "@mui/material";
 import BookOutlinedIcon from "@mui/icons-material/BookOutlined";
+import { useNavigate } from "react-router-dom";
+/**
+ *
+ * /@TODO:
+ *  I need to make the header route based on what is clicked,
+ * Hannah's name: Landing
+ * About: about
+ * ...
+ * */
 
 const Header = () => {
+  const navigate = useNavigate();
   const theme = useTheme();
   return (
     <AppBar
@@ -18,7 +28,7 @@ const Header = () => {
       style={{ backgroundColor: theme.palette.topnav.main }}
     >
       <Toolbar style={{ justifyContent: "" }}>
-        <IconButton>
+        <IconButton onClick={() => navigate("/")}>
           <BookOutlinedIcon
             style={{ color: theme.typography.lightPrimaryText }}
           />
@@ -30,19 +40,32 @@ const Header = () => {
         >
           Hannah Mahan
         </Typography>
+
         <Box
           sx={{
             display: { xs: "none", md: "flex" },
             color: theme.typography.lightSecondaryText,
           }}
         >
-          <Button variant="text" color="inherit">
+          <Button
+            onClick={() => navigate("/about")}
+            variant="text"
+            color="inherit"
+          >
             About
           </Button>
-          <Button variant="text" color="inherit">
+          <Button
+            onClick={() => navigate("/writings")}
+            variant="text"
+            color="inherit"
+          >
             Writings
           </Button>
-          <Button variant="text" color="inherit">
+          <Button
+            onClick={() => navigate("/contact")}
+            variant="text"
+            color="inherit"
+          >
             Contact
           </Button>
         </Box>
