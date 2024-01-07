@@ -9,7 +9,11 @@ const Card = () => {
       <Grid container spacing={2}>
         {matches && (
           <Grid item sm={4}>
-            <img style={{ width: 300, paddingLeft: "30%" }} src={image} />
+            <img
+              alt="name"
+              style={{ width: 300, paddingLeft: "30%" }}
+              src={image}
+            />
           </Grid>
         )}
 
