@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import { CssBaseline, Stack, useTheme } from "@mui/material";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 const AppRouter = () => {
+  const [isAdmin] = React.useState(true);
   const theme = useTheme();
   return (
     <BrowserRouter basename="/">
@@ -20,9 +21,9 @@ const AppRouter = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/writings" element={<Writings />} />
+          <Route path="/about" element={<About isAdmin={isAdmin} />} />
+          <Route path="/contact" element={<Contact isAdmin={isAdmin} />} />
+          <Route path="/writings" element={<Writings isAdmin={isAdmin} />} />
         </Routes>
         {/* Your other components and content */}
       </Stack>
