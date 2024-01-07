@@ -1,6 +1,10 @@
 import React from "react";
 import { Box, Typography, Stack, Divider, useTheme } from "@mui/material";
 import Card from "../components/Card/Card";
+/**
+ *
+ * Make an api call that retrieves the most recent posts for the reader.
+ */
 const Landing = () => {
   const theme = useTheme();
   return (
