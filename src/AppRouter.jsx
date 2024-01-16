@@ -21,7 +21,7 @@ const AppRouter = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/about" element={<About isAdmin={isAdmin} />} />
+          <Route path="/about" element={<About isAdmin={true} />} />
           <Route path="/contact" element={<Contact isAdmin={isAdmin} />} />
           <Route path="/writings" element={<Writings isAdmin={isAdmin} />} />
         </Routes>

@@ -1,7 +1,7 @@
 import React from "react";
-import { Typography, Box, Stack, Grid } from "@mui/material";
+import { Typography, Box, Stack, Grid, Button } from "@mui/material";
 import image from "../assets/coffeeImage.png";
-const About = ({ isAdmin }) => {
+const About = ({ isAdmin: boolean }) => {
   return (
     <Box>
       <Stack>
@@ -19,6 +19,7 @@ const About = ({ isAdmin }) => {
             />
           </Grid>
           <Grid item xs={8} sx={{ paddingRight: "20%" }}>
+            {isAdmin && <Button>Edit</Button>}
             <Typography variant="h5">Hannah Mahan</Typography>
             <Typography>
               Understanding React Components Introduction React is a powerful
