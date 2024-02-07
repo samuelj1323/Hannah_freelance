@@ -16,20 +16,18 @@ const Header = () => {
   const theme = useTheme();
   return (
     <AppBar
-      position="static"
-      style={{ backgroundColor: theme.palette.topnav.main }}
+      position="sticky"
+      style={{
+        backgroundColor: theme.palette.background.default,
+        boxShadow: "none",
+      }}
     >
       <Toolbar style={{ justifyContent: "" }}>
-        <IconButton onClick={() => navigate("/")}>
-          <BookOutlinedIcon
-            style={{ color: theme.typography.lightPrimaryText }}
-          />
-        </IconButton>
         <Typography
           onClick={() => navigate("/")}
           sx={{ flexGrow: 1, fontFamily: "times-new-roman" }}
           variant="h4"
-          color={theme.typography.lightPrimaryText}
+          color={theme.palette.text.primary}
         >
           Hannah Mahan
         </Typography>
@@ -37,7 +35,7 @@ const Header = () => {
         <Box
           sx={{
             display: { xs: "none", md: "flex" },
-            color: theme.typography.lightSecondaryText,
+            color: theme.palette.text.primary,
           }}
         >
           <Button
